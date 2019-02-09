@@ -14,7 +14,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from "@angular/forms";
 import { RatingModule } from 'ngx-bootstrap';
-import { FetchService } from "./image/shared/fetch.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +27,7 @@ import { FetchService } from "./image/shared/fetch.service";
     BrowserModule,RatingModule.forRoot(),
     AppRoutingModule,AlertModule.forRoot(),RouterModule.forRoot(appRoutes),HttpClientModule,FormsModule
   ],
-  providers: [ImageService,ImageFilterPipe,FetchService],
+  providers: [ImageService,ImageFilterPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
