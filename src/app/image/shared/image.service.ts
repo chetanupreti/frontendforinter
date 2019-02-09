@@ -36,6 +36,15 @@ export class ImageService{
         return IMA.slice(0).find(image => image.id == id)
     }
 
+    setRating(id:number, rating){
+        IMA.slice(0).find(image => {
+           if(image.id == id){
+             image["rating"]=rating
+           }
+           return image.id == id
+        })
+    }
+
     
 }
 

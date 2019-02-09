@@ -27,14 +27,16 @@ export class ImageDetailComponent {
       this.isReadonly = true;
      
     }
+
+   
   }
-  
  
   resetStars() {
     this.rate = 0;
     this.isReadonly = false;
   }
   submit(){
+    this.imageService.setRating(this.route.snapshot.params['id'],this.rate)
     console.log(this.rate)
   }
 }
