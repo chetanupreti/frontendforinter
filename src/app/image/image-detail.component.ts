@@ -28,6 +28,7 @@ export class ImageDetailComponent {
      
     }
   }
+  
  
   resetStars() {
     this.rate = 0;
