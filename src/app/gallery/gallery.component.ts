@@ -13,7 +13,7 @@ export class GalleryComponent implements OnChanges {
   visibleImages:any[] = [];
 
   constructor(private imageService: ImageService) {
-    console.log(this.filterBy)
+    //console.log(this.filterBy)
     this.visibleImages = this.imageService.getImages();
   }
 
