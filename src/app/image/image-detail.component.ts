@@ -25,11 +25,15 @@ export class ImageDetailComponent {
   confirmSelection(event: KeyboardEvent) {
     if (event.keyCode === 13 || event.key === 'Enter') {
       this.isReadonly = true;
+     
     }
   }
  
   resetStars() {
     this.rate = 0;
     this.isReadonly = false;
+  }
+  submit(){
+    console.log(this.rate)
   }
 }
