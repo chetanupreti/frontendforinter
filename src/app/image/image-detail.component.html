@@ -1,0 +1,24 @@
+<div class="row">
+  <div class=col-md-12>
+    <div [ngStyle]="{'background-image':'url('+ image.url +')'}" class="img-container paper">
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="col-md-12 caption-row">
+      <span id="caption">
+        {{image.caption}}
+      </span>
+    </div>
+</div>
+
+
+<rating [(ngModel)]="rate" [max]="max" [readonly]="isReadonly"
+        (keyup)="confirmSelection($event)"></rating>
+<div class="card">
+  <pre class="card-block card-header" style="margin:15px 0;">Rating: <b>{{rate}}</b></pre>
+  <label style="margin-left: 20px;margin-top: 20px"> Submit-By:</label>  <input type="text" style="margin-left: 20px;margin-top: 20px">
+<label style="margin-left: 20px;margin-top: 20px"> Submit-Reason:</label>  <input type="text" style="margin-left: 20px;margin-top: 20px">
+</div>
+<button class="btn btn-primary" (click)="resetStars()" style="margin-left: 20px;margin-top: 20px">Reset rating and status</button>
+<button class="btn btn-primary" routerLink="/gallery" style="margin-left: 20px;margin-top: 20px">submit</button>
